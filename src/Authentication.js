@@ -47,10 +47,10 @@ function Authentication() {
 function LoginForm() {
   return (
     <React.Fragment>
-      <label for='username'>USERNAME</label>
+      <label htmlFor='username'>USERNAME</label>
       <input type='text' id='username' />
-      <label for='password'>PASSWORD</label>
-      <input type='text' id='password' />
+      <label htmlFor='password'>PASSWORD</label>
+      <input type='password' id='password' />
       <input type='submit' value='submit' className='submit' />
     </React.Fragment>
   )
@@ -59,14 +59,14 @@ function LoginForm() {
 function RegistrationForm() {
   return (
     <React.Fragment>
-      <label for='fullname'>full name</label>
+      <label htmlFor='fullname'>full name</label>
       <input type='text' id='fullname' />
-      <label for='email'>email</label>
+      <label htmlFor='email'>email</label>
       <input type='text' id='email' />
-      <label for='password'>password</label>
-      <input type='text' id='password' />
-      <label for='confirmPassword'>confirm password</label>
-      <input type='text' id='confirmPassword' />
+      <label htmlFor='password'>password</label>
+      <input type='password' id='password' />
+      <label htmlFor='confirmPassword'>confirm password</label>
+      <input type='password' id='confirmPassword' />
       <input type='submit' value='submit' className='submit' />
     </React.Fragment>
   )
