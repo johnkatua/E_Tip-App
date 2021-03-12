@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import '../Authentication/Authentication.css';
 import {useSpring, animated} from 'react-spring';
 
@@ -52,7 +53,7 @@ function LoginForm() {
       <input type='text' id='username' />
       <label htmlFor='password'>PASSWORD</label>
       <input type='password' id='password' />
-      <input type='submit' value='submit' className='submit' />
+      <button type='submit' value='submit' className='submit'><Link to='/dashboard' className='link'>Submit</Link></button>
     </React.Fragment>
   )
 }
@@ -68,7 +69,7 @@ function RegistrationForm() {
       <input type='password' id='password' />
       <label htmlFor='confirmPassword'>confirm password</label>
       <input type='password' id='confirmPassword' />
-      <input type='submit' value='submit' className='submit' />
+      <button type='submit' value='submit' className='submit'>Submit</button>
     </React.Fragment>
   )
 }
