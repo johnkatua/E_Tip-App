@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import '../Authentication/Authentication.css';
 import {useSpring, animated} from 'react-spring';
 
 function Authentication() {

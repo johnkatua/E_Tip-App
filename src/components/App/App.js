@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import Authentication from './Authentication';
+import '../App/App.css';
+import Authentication from '../Authentication/Authentication';
 
 function App() {
   return (
