@@ -11,6 +11,13 @@
   background: linear-gradient(180deg, rgba(118,118,120,0.8931547619047619) 0%, rgba(170,170,181,0.8127626050420168) 39%, rgba(245,249,250,0) 87%);
 }
 
+.auth {
+  background-image: url("../App/image2.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
 /* nav-buttons*/
 .nav-buttons {
   width: 100%;

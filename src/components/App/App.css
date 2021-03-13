@@ -9,14 +9,9 @@ html, body, body * {
   /* border: 2px solid orange; */
 }
 
-body {
-  background-image: url("./image2.jpg");
-  background-size: cover;
-  background-position: center center;
-}
-
 .container {
+  height: 100%;
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 100px;
+  /* padding-top: 60px;
+  padding-bottom: 100px; */
 }

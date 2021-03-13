@@ -1,0 +1,36 @@
+.Nav {
+  background: #15171c;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+}
+
+.NavIcon {
+  margin-left: 2em;
+  font-size: 1.5em;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.NavHeader {
+  text-align: center;
+  margin-left: 500px;
+  color: aqua;
+}
+
+.SideBarNav {
+  background-color: #15171c;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  /* left: ({sidebar}) => (sidebar ? '0': '-100%'); */
+  transition: 350ms;
+  z-index: 10;
+}

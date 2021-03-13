@@ -30,18 +30,20 @@ function Authentication() {
     setRegisterFormStatus(true);
   }
   return (
-    <div className='login-register-wrapper'>
-      <div className='nav-buttons'>
-        <animated.button onClick={loginClicked} id='loginBtn' style={loginBtnProps}>Login</animated.button>
-        <animated.button onClick={registerClicked} id='registerBtn' style={registerBtnProps}>Register</animated.button>
+    <div className='auth'>
+      <div className='login-register-wrapper'>
+        <div className='nav-buttons'>
+          <animated.button onClick={loginClicked} id='loginBtn' style={loginBtnProps}>Login</animated.button>
+          <animated.button onClick={registerClicked} id='registerBtn' style={registerBtnProps}>Register</animated.button>
+        </div>
+        <div className='form-group'>
+          <animated.form action='' id='loginForm' style={loginProps}><LoginForm/></animated.form>
+          <animated.form action='' id='registrationForm' style={registerProps}><RegistrationForm /></animated.form>
+        </div>
+        <animated.div className="forgot-panel" style={loginProps}>
+          <a href='/#'>Forgot password</a>
+        </animated.div>
       </div>
-      <div className='form-group'>
-        <animated.form action='' id='loginForm' style={loginProps}><LoginForm/></animated.form>
-        <animated.form action='' id='registrationForm' style={registerProps}><RegistrationForm /></animated.form>
-      </div>
-      <animated.div className="forgot-panel" style={loginProps}>
-        <a href='/#'>Forgot password</a>
-      </animated.div>
     </div>
   )
 }
