@@ -30,7 +30,7 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  transition: .35s;
+  transition: all .35s ease;
   z-index: 10;
 }
 

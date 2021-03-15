@@ -5,25 +5,25 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons/lib';
 import { useSpring, animated } from 'react-spring';
+import {DashboardData} from '../DashboardData/DashboardData';
+import SubMenu from '../SubMenu/SubMenu';
 
-function Dashboard() {
+const Dashboard = () => {
   const [sidebar, setSidebar] = useState(false);
 
-  const showSidebar = () => {
-    setSidebar(!sidebar);
-  }
+  const showSidebar = () => setSidebar(!sidebar);
 
   const SideBarNavStyle = useSpring({
     left: sidebar ? '0' : '-100%'
   });
 
-  const MoveSidebar = useSpring({
-    left: sidebar ? '100%' : '0' 
-  });
+  // const MoveSidebar = useSpring({
+  //   left: sidebar ? '100%' : '0' 
+  // });
 
   return (
     <IconContext.Provider value={{color: "#fff"}}>
-      <animated.div className='Nav' style={MoveSidebar}>
+      <animated.div className='Nav'>
         <Link to='#' className='NavIcon'>
           <FaIcons.FaBars onClick={showSidebar}/>
         </Link>
@@ -34,6 +34,9 @@ function Dashboard() {
           <Link to='#' className='NavIcon'>
             <AiIcons.AiOutlineClose onClick={showSidebar} />
           </Link>
+          {DashboardData.map((item, index) => {
+            return <SubMenu item={item} key={index} />
+          })}
         </div>
       </animated.nav>
     </IconContext.Provider>
