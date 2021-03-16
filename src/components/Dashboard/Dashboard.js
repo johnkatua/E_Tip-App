@@ -9,27 +9,30 @@ import {DashboardData} from '../DashboardData/DashboardData';
 import SubMenu from '../SubMenu/SubMenu';
 
 const Dashboard = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [isShowSidebar, setSidebar] = useState(false);
 
-  const showSidebar = () => setSidebar(!sidebar);
+const showSidebar = (e) => {
+  e.preventDefault();
+  setSidebar(!isShowSidebar);
+}
 
   const SideBarNavStyle = useSpring({
-    left: sidebar ? '0' : '-100%'
+    left: isShowSidebar ? '0' : '-100%'
   });
 
-  // const MoveSidebar = useSpring({
-  //   left: sidebar ? '100%' : '0' 
-  // });
+  const MoveSidebar = useSpring({
+    left: isShowSidebar ? '100%' : '0' 
+  });
 
   return (
     <IconContext.Provider value={{color: "#fff"}}>
-      <animated.div className='Nav'>
+      <animated.div className='Nav' style={MoveSidebar}>
         <Link to='#' className='NavIcon'>
           <FaIcons.FaBars onClick={showSidebar}/>
         </Link>
         <h1 className='NavHeader'>E-Tip Banking</h1>
       </animated.div>
-      <animated.nav className='SideBarNav' sidebar={sidebar} style={SideBarNavStyle}>
+      <animated.nav className='SideBarNav' sidebar={isShowSidebar.toString()} style={SideBarNavStyle}>
         <div className='SideBarWrap'>
           <Link to='#' className='NavIcon'>
             <AiIcons.AiOutlineClose onClick={showSidebar} />
