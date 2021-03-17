@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import './SubMenu.css'
 
-const SubMenu = ({item}) => {
-  const [subnav, setSubnav] = useState();
+const SubMenu = ({ item }) => {
+  console.log(item.subNav);
+  const [subnav, setSubnav] = useState(false);
 
 
   const showSubnav = () => {
-    setSubnav(subnav);
+    setSubnav(!subnav);
   }
   return (
     <>
@@ -18,8 +19,10 @@ const SubMenu = ({item}) => {
         </div>
         <div>
           {item.subNav && subnav
-            ? item.iconOpened : item.subNav
-            ? item.iconClosed : null
+            ? item.iconOpened 
+            : item.subNav
+            ? item.iconClosed 
+            : null
           }
         </div>
       </Link>
@@ -31,11 +34,11 @@ const SubMenu = ({item}) => {
               {item.icon}
               <span>{item.title}</span>
             </Link>
-          )
+          );
         })
       }
     </>
   )
 }
 
-export default SubMenu
+export default SubMenu;

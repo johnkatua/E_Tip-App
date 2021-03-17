@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../Dashboard/Dashboard.css';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons/lib';
 import { useSpring, animated } from 'react-spring';
-import {DashboardData} from '../DashboardData/DashboardData';
+import { DashboardData } from '../DashboardData/DashboardData';
 import SubMenu from '../SubMenu/SubMenu';
 
 const Dashboard = () => {

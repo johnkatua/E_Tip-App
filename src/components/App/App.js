@@ -13,10 +13,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Dashboard />
         <Switch>
           <Route path='/' exact component={Authentication} />
-          <Route path='/dashboard' exact component={Dashboard} />
-          <Route path='/about-us' exact component={AboutUs} />
+          <Route path='/about-us' exat component={AboutUs} />
           <Route path='/about-us/aim' exact component={OurAim} />
           <Route path='/about-us/vision' exact component={OurVision} />
           <Route path='/services' exact component={Services} />
