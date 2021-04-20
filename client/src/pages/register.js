@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container,Form, Button, Header } from 'semantic-ui-react';
+import { Form, Button, Header, Container } from 'semantic-ui-react';
 
 
 const initialValues = {
@@ -27,7 +27,7 @@ const RegisterPage = () => {
   }
 
   return (
-    <Container fluid className='container'>
+    <Container fluid className='register'>
       <Header as='h2'>Register</Header>
       <Form className='form'>
         <Form.Field>
@@ -50,7 +50,7 @@ const RegisterPage = () => {
           <Button color='blue' type='Submit' onClick={handleSubmit}>submit</Button>
         </Link>
         <Link to='/login'>
-          <h2>I have an account  already!</h2>
+          <Button color='green' type='text'>I have an account  already!</Button>
         </Link>
       </Form>
     </Container>

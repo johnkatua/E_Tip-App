@@ -1,0 +1,40 @@
+.header_h1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #456745;
+  height: 90px; 
+}
+
+
+.header-logo {
+  font-size: 36px;
+  float: left;
+  padding: 20px 40px;
+}
+
+.header-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  float: left;
+  padding: 33px 20px;
+}
+
+.header-buttons {
+  padding: 27px 40px;
+  /* background-color: blue; */
+};
+
+.btn1 {
+  background-color: darkblue;
+  font-size: 20px;
+  margin-left: 4px;
+}
+
+.btn2 {
+  margin-right: 3px;
+  background-color: darkcyan;
+}

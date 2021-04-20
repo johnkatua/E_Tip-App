@@ -2,6 +2,25 @@
   width: 500px;
 }
 
-.container {
+.register {
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  height: 600px;
+  background-color: brown;
+}
+
+.footer {
+  background-color: coral;
+  height: 90px;
+}
+
+.login {
   padding: 20px;
 }
